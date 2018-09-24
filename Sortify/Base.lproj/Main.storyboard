@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11134" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11134"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14313.18"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -147,8 +149,7 @@
                                                 <action selector="paste:" target="Ady-hI-5gd" id="UvS-8e-Qdg"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Paste and Match Style" keyEquivalent="V" id="WeT-3V-zwk">
-                                            <modifierMask key="keyEquivalentModifierMask" option="YES" command="YES"/>
+                                        <menuItem title="Paste and Match Style" keyEquivalent="v" id="WeT-3V-zwk">
                                             <connections>
                                                 <action selector="pasteAsPlainText:" target="Ady-hI-5gd" id="cEh-KX-wJQ"/>
                                             </connections>
@@ -673,7 +674,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Sortify" customModuleProvider="target"/>
                 <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -703,15 +704,60 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Sortify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="208"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lqv-nk-n2a">
+                                <rect key="frame" x="122" y="57" width="237" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Fun project made by Francisco Amado" id="ngf-Gu-Wyw">
+                                    <font key="font" usesAppearanceFont="YES"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="zku-wt-NQu">
+                                <rect key="frame" x="53" y="20" width="374" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Check the code at http://github.com/FranciscoAmado/Sortify" id="chi-8b-Q3l">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Ih-aR-kzl">
+                                <rect key="frame" x="124" y="171" width="232" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Sortify should now be installed 🎉🎉" id="Le1-Zp-5t6">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="XdU-IH-pX2">
+                                <rect key="frame" x="154" y="134" width="173" height="17"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Close and Open your Xcode" id="9Eb-YF-Yds">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="9Ih-aR-kzl" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="DCH-vc-mKV"/>
+                            <constraint firstAttribute="bottom" secondItem="zku-wt-NQu" secondAttribute="bottom" constant="20" id="Enq-pi-qeP"/>
+                            <constraint firstItem="zku-wt-NQu" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="HKi-RG-rvj"/>
+                            <constraint firstItem="XdU-IH-pX2" firstAttribute="top" secondItem="9Ih-aR-kzl" secondAttribute="bottom" constant="20" id="SUy-na-0RO"/>
+                            <constraint firstItem="9Ih-aR-kzl" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="X8d-8T-mCq"/>
+                            <constraint firstItem="XdU-IH-pX2" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="ZXS-T9-YWm"/>
+                            <constraint firstItem="zku-wt-NQu" firstAttribute="top" secondItem="lqv-nk-n2a" secondAttribute="bottom" constant="20" id="drR-kZ-rBg"/>
+                            <constraint firstItem="lqv-nk-n2a" firstAttribute="top" secondItem="XdU-IH-pX2" secondAttribute="bottom" constant="60" id="eG6-qY-eMG"/>
+                            <constraint firstItem="lqv-nk-n2a" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="vOi-LR-K5s"/>
+                        </constraints>
                     </view>
                 </viewController>
-                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="75" y="740"/>
         </scene>
     </scenes>
 </document>
