@@ -24,7 +24,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             let sortedLines = lines
                 .subarray(with: linesRange)
                 .compactMap { $0 as? String }
-                .sorted(by: <)
+                .sorted { $0.trimmed < $1.trimmed }
 
             invocation.buffer.lines.replaceObjects(in: linesRange, withObjectsFrom: sortedLines)
         }
@@ -32,5 +32,12 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
         // Invoking the completion handler when done. Pass it nil on success, and an NSError on failure.
         completionHandler(nil)
     }
-    
+}
+
+private extension String {
+
+    var trimmed: String {
+
+        return self.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }

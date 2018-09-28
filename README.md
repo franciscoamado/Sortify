@@ -35,7 +35,7 @@ You can validate if the Extension is enabled in `System Preferences >> Extension
 ## Known issues
 
 * Simple text sorting
-* Text needs to be aligned to work properly
+* ~~Text needs to be aligned to work properly~~
 
 ## TODO
 
