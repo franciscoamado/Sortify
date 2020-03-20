@@ -22,13 +22,19 @@ This is a **temporary installation** as it will only work when running the proje
 1. Download the [latest release](https://github.com/FranciscoAmado/Sortify/releases) `Sortify.zip`
 2. Open the `Sortify.app`, which will add the Extension to Xcode.
 3. (Optional) Move the `Sortify.app` to the `Applications` folder.
-
-You can validate if the Extension is enabled in `System Preferences >> Extensions`
+4. Enable the Extension in `System Preferences >> Extensions`
 
 ## Usage
 
 1. Select the lines that will be sorted in the open file
 2. Xcode >> Editor >> Sortify >> **Sort Selected Lines**
+
+*Pro tip!* - You can add a keyboard shortcut to sort the lines via `System Preferences >> Keyboard >> Shortcuts >> App Shortcuts`.
+The command below adds this shortcut for you, for the shortcut `ctrl + shift + i` on Xcode:
+
+```
+defaults write com.github.atom NSUserKeyEquivalents -dict-add "Sort Selected Lines" "^\$i"
+```
 
 ![Sortify in Xcode](./.github/sortify.gif)
 
