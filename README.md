@@ -33,7 +33,7 @@ This is a **temporary installation** as it will only work when running the proje
 The command below adds this shortcut for you, for the shortcut `ctrl + shift + i` on Xcode:
 
 ```
-defaults write com.github.atom NSUserKeyEquivalents -dict-add "Sort Selected Lines" "^\$i"
+defaults write com.apple.dt.Xcode NSUserKeyEquivalents -dict-add "Sort Selected Lines" "^\$i"
 ```
 
 ![Sortify in Xcode](./.github/sortify.gif)
