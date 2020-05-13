@@ -24,7 +24,7 @@ class SourceEditorCommand: NSObject, XCSourceEditorCommand {
             let sortedLines = lines
                 .subarray(with: linesRange)
                 .compactMap { $0 as? String }
-                .sorted { $0.trimmed < $1.trimmed }
+                .sorted { $0.trimmed.caseInsensitiveCompare($1.trimmed) == .orderedAscending }
 
             invocation.buffer.lines.replaceObjects(in: linesRange, withObjectsFrom: sortedLines)
         }
